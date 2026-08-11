@@ -59,6 +59,11 @@ When you are finished working with the project, deactivate the virtual environme
 deactivate
 ```
 
+### Note
+
+Initial installation could take some time ~30 sec if virtual environment is used. Feel free to skip the venv if you want to use the code in an existing environment.
+
+
 ## Project Structure
 
 The repository may contain the following types of files and directories:
