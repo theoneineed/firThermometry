@@ -2,3 +2,8 @@ numpy>=2.3.2
 matplotlib>=3.10.5
 pandas>=2.3.2
 plotly>=6.2.0
+
+
+# for viewing plotly plots in jnb, you might need to install nbformat, especially when running using venv
+# pip install --upgrade nbformat
+# if needed

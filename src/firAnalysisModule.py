@@ -473,7 +473,7 @@ def graphCountsVsWavelength3D(arr2D, tempArr, fromTempIdx = 0, toTempIdx = -1, s
         )
     
     if toTempIdx == -1:
-        toTempIdx = len(tempArr)
+        toTempIdx = len(tempArr) - 1 #because the nth temperature will have n-1 index in tempArr but n index in arr2D
 
         
     lowerLambda = arr2D[1,  0]
@@ -1002,7 +1002,7 @@ def plotIntegratedIntensities(arr2D
 
 
 
-def plotXRD(xrdData, saveFigure, saveName = "images/xrdPattern.pdf"):
+def plotXRD(xrdData, saveFigure=False, saveName = "images/xrdPattern.pdf"):
     """
     Plots X-ray diffraction (XRD) data and optionally saves the figure.
  
@@ -1013,7 +1013,7 @@ def plotXRD(xrdData, saveFigure, saveName = "images/xrdPattern.pdf"):
         xrdData (numpy.ndarray or list of lists): The XRD data. Each row should contain 
             two values: the diffraction angle (2θ, in degrees) and the corresponding intensity 
             (arbitrary units). Data should have shape (n_points, 2).
-        saveFigure (bool): If True, the plot is saved to the file path specified by saveName.
+        saveFigure (bool): If True, the plot is saved to the file path specified by saveName, defaults to false.
         saveName (str, optional): The file path (including filename and extension) where the 
             plot will be saved. Defaults to "images/xrdPattern.pdf". Common formats: 
             .png, .pdf, .jpg.
